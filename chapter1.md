@@ -1,4 +1,4 @@
-### API接口文档生成工具的使用方法
+# API接口文档生成工具的使用方法
 
 ## 1、在工程中引如相关包
 
@@ -125,6 +125,4 @@ public class GenApiApplication {
 ## 4、运行
 
 运行生成工具类，到apiFilePath目录中，打开index.html即可看到生成的接口文档。
-
-
 
