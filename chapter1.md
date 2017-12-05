@@ -43,55 +43,54 @@ public class DiseasePlusService{
 
 在需要生成API文档的接口方法上添加如下注解，以下是范例：
 
-    @Description\({
+```java
+@Description\({
 
-            "jsonString=searchInput=String=icd-10编码\(疾病名称\)&lt;/br&gt;" +
+        "jsonString=searchInput=String=icd-10编码\(疾病名称\)&lt;/br&gt;" +
 
-                    "choice=String=疾病分类&lt;/br&gt;" +
+                "choice=String=疾病分类&lt;/br&gt;" +
 
-                    "dataStatus=tinyint=数据状态&lt;/br&gt;",
+                "dataStatus=tinyint=数据状态&lt;/br&gt;",
 
-            "result=查询结果对象",
+        "result=查询结果对象",
 
-            "result.rows=数据集",
+        "result.rows=数据集",
 
-            "result.total=条数",
+        "result.total=条数",
 
-            "result.code=查询结果代码",
+        "result.code=查询结果代码",
 
-            "result.message=操作结果描述"
+        "result.message=操作结果描述"
 
-            }\)
+        }\)
 
-    @Example\({
+@Example\({
 
-            "jsonString={\"searchInput\":\"糖尿病\",\"choice\":\"免疫系统疾病\",\"dataStatus\":1}",
+        "jsonString={\"searchInput\":\"糖尿病\",\"choice\":\"免疫系统疾病\",\"dataStatus\":1}",
 
-            "result={\"total\":2,\"code\":200,\"message\":\"查询成功\"}",
+        "result={\"total\":2,\"code\":200,\"message\":\"查询成功\"}",
 
-            "result.rows=",
+        "result.rows=",
 
-            "result.total=18",
+        "result.total=18",
 
-            "result.code=200",
+        "result.code=200",
 
-            "result.message=查询成功"
+        "result.message=查询成功"
 
-            }\)
+        }\)
 
-    @Required\("jsonString"\)
+@Required\("jsonString"\)
 
-    @Excludes\({ "" }\)
+@Excludes\({ "" }\)
 
-    @Path\(value = "/disease/list", description = "查询疾病字典"\)
+@Path\(value = "/disease/list", description = "查询疾病字典"\)
 
-    @GetMapping\("/disease/list"\)
+@GetMapping\("/disease/list"\)
 
-    public ResultLogic getDiseaseList\(@RequestParam final String jsonString\) {
-
+public ResultLogic getDiseaseList\(@RequestParam final String jsonString\) {
 }
+```
 
-
-
-
+3、添加生成工具类
 
