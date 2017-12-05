@@ -110,10 +110,10 @@ public class GenApiApplication {
         info.setTermsOfService("aurora");
         info.setGit("git.com/weahan");
         info.setDate(Calendar.getInstance().getTime());
-        
+
         // 要生成接口文档的类的包名，实际会到class目录下的相应文件夹中扫描class类名
         String[] servPacks = { "com.weahan.platform.services.diseaseService**" };
-        
+
         // 接口文档的js页面路径，具体需要从如下地址下载：
         // http://118.190.78.40:5276/base/base/0.2-Code/2.0-Trunk/Utility/SmileApiGenerator/SmileApiDocs
         Config.apiFilePath = "E:\\space_node\\smile-apidoc\\api.js";
@@ -121,6 +121,10 @@ public class GenApiApplication {
     }
 }
 ```
+
+## 4、运行
+
+运行生成工具类，到apiFilePath目录中，打开index.html即可看到生成的接口文档。
 
 
 
