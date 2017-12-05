@@ -1,28 +1,28 @@
 # API接口文档生成工具的使用方法
 
-1、在工程中引如相关包
+## 1、在工程中引如相关包
 
-`<dependency>`
+`<dependency>`
 
-`	<groupId>com.weahan.utility</groupId>`
+`<groupId>com.weahan.utility</groupId>`
 
-`	<artifactId>smile-apiGenerator</artifactId>`
+`<artifactId>smile-apiGenerator</artifactId>`
 
-`	<version>1.1.0-SNAPSHOT</version>`
+`<version>1.1.0-SNAPSHOT</version>`
 
 `</dependency>`
 
 注：继承自下面以上版本pom的工程，已经自动依赖引入，无需再次引入：
 
-`<parent>`
+`<parent>`
 
-`        <groupId>com.weahan.core</groupId>`
+`<groupId>com.weahan.core</groupId>`
 
-`        <artifactId>weahan-core-provider</artifactId>`
+`<artifactId>weahan-core-provider</artifactId>`
 
-`        <version>1.1.4</version>`
+`<version>1.1.4</version>`
 
-` </parent>`
+`</parent>`
 
-
+2、
 
