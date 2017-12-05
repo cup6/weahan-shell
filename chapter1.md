@@ -28,7 +28,14 @@
 
 ### 2.1 添加类注解
 
-在需要添加
+在需要生成API文档的类上添加如下注解：
 
+```java
+@Tag("疾病服务")
+public class DiseasePlusService{
 
+}
+```
+
+@Tag里面的内容为此服务的名称。
 
