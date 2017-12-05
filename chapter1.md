@@ -39,3 +39,5 @@ public class DiseasePlusService{
 
 @Tag里面的内容为此服务的名称。
 
+2.2 添加接口方法注解
+
