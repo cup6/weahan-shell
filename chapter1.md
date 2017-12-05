@@ -92,5 +92,83 @@ public ResultLogic getDiseaseList\(@RequestParam final String jsonString\) {
 }
 ```
 
-3、添加生成工具类
+## 3、添加生成工具类
+
+在工程里增加生成工具类，并根据含义进行配置，如下所示：
+
+`package com.weahan.platform.services;`
+
+``
+
+`import java.util.Calendar;`
+
+``
+
+`import com.sunx.api.common.Config;`
+
+`import com.sunx.api.main.Generator;`
+
+`import com.sunx.api.model.InfoDescription;`
+
+``
+
+`/**`
+
+` *`
+
+` */`
+
+`public class GenApiApplication {`
+
+`    public static void main(String[] args) {`
+
+``
+
+`        InfoDescription info = new InfoDescription();`
+
+`        info.setTitle("疾病服务");`
+
+`        info.setDescription("疾病服务接口说明");`
+
+`        info.setVersion("v1.0.0");`
+
+`        info.setHost("api.weahan.com");`
+
+`        info.setBasePath("/diseaseService");`
+
+`        info.setEmail("api@weahan.com");`
+
+`        info.setTermsOfService("aurora");`
+
+`        info.setGit("git.com/weahan");`
+
+`        info.setDate(Calendar.getInstance().getTime());`
+
+``
+
+`        String[] servPacks = { "com.weahan.platform.services.diseaseService**" };`
+
+``
+
+`        // 默认：result`
+
+`        // Config.responseParamName = "data";`
+
+`        // 默认："E:\\api-generator\\api.js"`
+
+`        Config.apiFilePath = "E:\\space_node\\smile-apidoc\\api.js";`
+
+``
+
+`        Generator.generatorApi(info, servPacks);`
+
+``
+
+`    }`
+
+`}`
+
+
+
+
 
