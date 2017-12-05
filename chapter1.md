@@ -2,27 +2,23 @@
 
 ## 1、在工程中引如相关包
 
-`<dependency>`
-
-`<groupId>com.weahan.utility</groupId>`
-
-`<artifactId>smile-apiGenerator</artifactId>`
-
-`<version>1.1.0-SNAPSHOT</version>`
-
-`</dependency>`
+```
+<dependency>
+    <groupId>com.weahan.utility</groupId>
+    <artifactId>smile-apiGenerator</artifactId>
+    <version>1.1.0-SNAPSHOT</version>
+</dependency>
+```
 
 注：继承自下面以上版本pom的工程，已经自动依赖引入，无需再次引入：
 
-`<parent>`
-
-`<groupId>com.weahan.core</groupId>`
-
-`<artifactId>weahan-core-provider</artifactId>`
-
-`<version>1.1.4</version>`
-
-`</parent>`
+```
+<parent>
+    <groupId>com.weahan.core</groupId>
+    <artifactId>weahan-core-provider</artifactId>
+    <version>1.1.4</version>
+</parent>
+```
 
 ## 2、给代码添加相应注解
 
@@ -95,8 +91,6 @@ public ResultLogic getDiseaseList\(@RequestParam final String jsonString\) {
 ## 3、添加生成工具类
 
 在工程里增加生成工具类，并根据含义进行配置，如下所示：
-
-
 
 ```java
 package com.weahan.platform.services;
