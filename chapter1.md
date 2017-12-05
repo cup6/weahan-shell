@@ -96,79 +96,59 @@ public ResultLogic getDiseaseList\(@RequestParam final String jsonString\) {
 
 在工程里增加生成工具类，并根据含义进行配置，如下所示：
 
-`package com.weahan.platform.services;`
+`package com.weahan.platform.services;`
 
-``
+`import java.util.Calendar;`
 
-`import java.util.Calendar;`
+`import com.sunx.api.common.Config;`
 
-``
+`import com.sunx.api.main.Generator;`
 
-`import com.sunx.api.common.Config;`
+`import com.sunx.api.model.InfoDescription;`
 
-`import com.sunx.api.main.Generator;`
+`/**`
 
-`import com.sunx.api.model.InfoDescription;`
+`*`
 
-``
+`*/`
 
-`/**`
+`public class GenApiApplication {`
 
-` *`
+`public static void main(String[] args) {`
 
-` */`
+`InfoDescription info = new InfoDescription();`
 
-`public class GenApiApplication {`
+`info.setTitle("疾病服务");`
 
-`    public static void main(String[] args) {`
+`info.setDescription("疾病服务接口说明");`
 
-``
+`info.setVersion("v1.0.0");`
 
-`        InfoDescription info = new InfoDescription();`
+`info.setHost("api.weahan.com");`
 
-`        info.setTitle("疾病服务");`
+`info.setBasePath("/diseaseService");`
 
-`        info.setDescription("疾病服务接口说明");`
+`info.setEmail("api@weahan.com");`
 
-`        info.setVersion("v1.0.0");`
+`info.setTermsOfService("aurora");`
 
-`        info.setHost("api.weahan.com");`
+`info.setGit("git.com/weahan");`
 
-`        info.setBasePath("/diseaseService");`
+`info.setDate(Calendar.getInstance().getTime());`
 
-`        info.setEmail("api@weahan.com");`
+`String[] servPacks = { "com.weahan.platform.services.diseaseService**" };`
 
-`        info.setTermsOfService("aurora");`
+`// 默认：result`
 
-`        info.setGit("git.com/weahan");`
+`// Config.responseParamName = "data";`
 
-`        info.setDate(Calendar.getInstance().getTime());`
+`// 默认："E:\\api-generator\\api.js"`
 
-``
+`Config.apiFilePath = "E:\\space_node\\smile-apidoc\\api.js";`
 
-`        String[] servPacks = { "com.weahan.platform.services.diseaseService**" };`
+`Generator.generatorApi(info, servPacks);`
 
-``
+`}`
 
-`        // 默认：result`
-
-`        // Config.responseParamName = "data";`
-
-`        // 默认："E:\\api-generator\\api.js"`
-
-`        Config.apiFilePath = "E:\\space_node\\smile-apidoc\\api.js";`
-
-``
-
-`        Generator.generatorApi(info, servPacks);`
-
-``
-
-`    }`
-
-`}`
-
-
-
-
+`}`
 
